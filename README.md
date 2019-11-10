@@ -11,5 +11,19 @@ In this project, the user will plug in these 4 simple commands to recieve releva
 
     4- With the command 'node liri.js do-what-it-says', the LIRI program will place text inside of a random.txt file and use it to call a command from LIRI.
 
-All of this will be performed from the 'bash/terminal.    
+All of this will be performed from the 'bash/terminal.  
+
+This project is mainly for school as I am learning the ins and outs of back-end cod and developement. 
+
+Here are the technologies used in this project:
+    - Node
+    - Axion
+    - JSON
+    - JavaScript
+    - Bands in Town API
+    - Spotify API
+    
+
+
+
   
