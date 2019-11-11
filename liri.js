@@ -8,6 +8,9 @@ var spotify = new Spotify(keys.spotify);
 
 var axios = require("axios");
 
+//adding moment for date of events
+var moment = require("moment");
+
 //reading and writing files
 var fs = require("fs");
 
@@ -27,6 +30,9 @@ switch (userImput) {
     // run API call using Axios to bands-in-town-API
     // inject user's search term in queryURL
      // display venue. location. date of event. (use moment to format date of event MM/DD/YYYY)
+     var moment = require('moment');
+moment().format();
+
 
 // Switch statement if userImput is "spotify-this-song"
 // using Node Spotify package info make call to spotify API
