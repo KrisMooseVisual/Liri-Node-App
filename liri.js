@@ -1,22 +1,20 @@
 require("dotenv").config();
+
 var keys = require("./keys.js");
+
 var Spotify = require('node-spotify-api');
+
 var spotify = new Spotify(keys.spotify);
+
 var axios = require("axios");
 
-// spotify.search({ type: 'track', query: 'All the Small Things' }, function(err, data) {
-//     if (err) {
-//       return console.log('Error occurred: ' + err);
-//     }
-
-//   console.log(data); 
-//   });
 
 // capture imput that user puts in
 var userImput = process.argv[2];
-var userRequest = // everything index of 3 and later
+var userRequest = process.argv[3]; // everything index of 3 and higher.
 
 console.log(userImput);
+
 // Switch statement if userImput is "concert-this"
     // run API call using Axios to bands-in-town-API
     // inject user's search term in queryURL
