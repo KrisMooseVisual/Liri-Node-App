@@ -25,9 +25,7 @@ switch (userImput) {
        concertThis();
         break;
     // run API call using Axios to bands-in-town-API
-
     // inject user's search term in queryURL
-
      // display venue. location. date of event. (use moment to format date of event MM/DD/YYYY)
 
 // Switch statement if userImput is "spotify-this-song"
@@ -44,8 +42,6 @@ switch (userImput) {
         // •ALBUM THAT SONG IS FROM
 
     // Provide default search term if user didn't provide arguement
-    default:
-        noArguement ("That does not compute. Try again!")
 
 // Switch statement if userImput is "movie-this"
     case "movie-this":
@@ -58,4 +54,6 @@ switch (userImput) {
         doWhatItSays();
         break;
 // if not, then display message to the user saying "That does not compute, try again!"
+default:
+        noArguement ("That does not compute. Try again!")
 };
