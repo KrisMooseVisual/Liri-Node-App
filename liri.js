@@ -9,17 +9,17 @@ var spotify = new Spotify(keys.spotify);
 var axios = require("axios");
 
 //adding moment for date of events
-//var moment = require("moment");
+var moment = require("moment");
 
 //reading and writing files
-//var fs = require("fs");
+var fs = require("fs");
 
 
 // capture imput that user puts in
-// var userInput = process.argv[2];
-// var userRequest = process.argv[3]; // everything index of 3 and higher.
-// console.log(userInput);
-// console.log(userRequest);
+var userInput = process.argv[2];
+var userRequest = process.argv[3]; // everything index of 3 and higher.
+console.log(userInput);
+console.log(userRequest);
 
 
 // Switch statement if userImput is "concert-this"
@@ -76,9 +76,9 @@ var nodeArgs = process.argv;
 var movieName = "";
 
 //For loop for node arguments 
-for (var i = 2; i < nodeArgs.length; i++) {
+for (var i = 3; i < nodeArgs.length; i++) {
 
-    if (i > 2 && i < nodeArgs.length) {
+    if (i > 3 && i < nodeArgs.length) {
         movieName = movieName + "+" + nodeArgs[i];
     }
     else {
@@ -87,13 +87,28 @@ for (var i = 2; i < nodeArgs.length; i++) {
 }
 
 //Request through axios to OMDB API
-var queryUrl = "http://www.omdbapi.com/?i=" + movieName + "tt3896198&apikey=4aa82962";
+var queryUrl = "http://www.omdbapi.com/?t=" + movieName + "&y=&plot=short&apikey=trilogy";
 console.log(queryUrl);
 
 axios.get(queryUrl).then(
     function (response) {
+        console.log("Title: " + response.data.movieName);
+
         console.log("Release Year: " + response.data.Year);
-    })
+
+        console.log("IMDB Rating: " + response.data.Rating);
+
+        console.log("Rotten Tomatoes Rating: " + response.data.rottenTomatoesRating);
+
+        console.log("Country: " + response.data.Country);
+
+        console.log("Language: " + response.data.Language);
+
+        console.log("Plot: " + response.data.Plot)
+
+        console.log("Cast: " + response.data.Cast);
+    });
+
     .catch(function (error) {
         if (error.response) {
             console.log("---------------Data---------------");
@@ -103,11 +118,11 @@ axios.get(queryUrl).then(
             console.log("---------------Status---------------");
             console.log(error.response.headers);
         }
-        else if (error.request); {
+        else if (error.request) {
             console.log(error.request);
         }
         else {
-            console.log("Error", error.message);
+            console.log("That entry does not compute. Try again!", error.message);
         }
         console.log(error.config);
     });
