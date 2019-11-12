@@ -25,6 +25,7 @@ console.log(userRequest);
 //Usig Axios for movie-this section.
 // storing all arguements in array
 var movieName = process.argv;
+
 //Empty variable for movie names
 var movieName = "";
 
@@ -101,7 +102,7 @@ switch (userFind) {
     // Switch statement if userInput is "movie-this"
     case "movie-this":
         console.log("Command: " + userCommand);
-        
+
         console.log("Find: " + userFind)
         // Provide default search term if user didn't provide arguement 'Black Dynomite' as default movie.
 
