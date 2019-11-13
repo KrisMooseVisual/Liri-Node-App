@@ -31,5 +31,5 @@ _This project is mainly for school as I am learning the ins and outs of back-end
     
 ![The Crow Movie](images/movie-this%20The%20Crow.png)
 
-
+![Everything But The Girl](images/Everything%20But%20The%20Girl%20Song.png)
   
