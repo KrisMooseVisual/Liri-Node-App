@@ -116,8 +116,6 @@ switch (userCommand) {
 
             });
         break;
-    // default:
-    //         console.log("Stuck on what to choose? Try this!: 'Black Dynamite' Starring Michael Jai White 'https://www.imdb.com/title/tt1190536/?ref_=fn_al_tt_1'" + response.data.undefined);
 
 
     // Switch statement if userImput is "do-what-it-says"
