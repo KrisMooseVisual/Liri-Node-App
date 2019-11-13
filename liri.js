@@ -62,20 +62,23 @@ switch (userCommand) {
     // Switch statement if userImput is "spotify-this-song"
     // using Node Spotify package info make call to spotify API
     case "spotify-this-song":
-        console.log("Command: " + userCommand);
-        console.log("Find: " + userFind);
-        if (!userFind) {
-            //Default song Dazed and Confused by Led Zepplin
-            userFind = "Dazed and Confused (Led Zepplin)";
-            // Disply to user:
+    //console.log("This is the spotify switch case");
+      spotify.search({ type: 'track', query: userRequest }, 
+      function(err, data) {
+        if (err) {
+          return console.log('Error occurred: ' + err);
+        }
+       // Disply to user:
             // var spotifyList
             // •ARTIST
-            // •SONGS NAME
+            console.log("Artist: " + userRequest.data);
+            // •SONGS NAME 
             // •PREVIEW LINK FROM SPOTIFY
             // •ALBUM THAT SONG IS FROM
-        }
-        spotifyThisSong(userFind);
-        break;
+      console.log(data.tracks.items[0]); 
+      });
+       break;
+        
 
     // Switch statement if userInput is "movie-this"
     case "movie-this":
