@@ -69,13 +69,19 @@ switch (userCommand) {
           return console.log('Error occurred: ' + err);
         }
        // Disply to user:
-            // var spotifyList
+       for (var i= 0; i < data.tracks.items.length; i++) {
+            var spotifyData = data.tracks.items[i];
             // •ARTIST
-            console.log("Artist: " + userRequest.data);
+            var songData = "Artist: " + spotifyData.artist[0].name + 
             // •SONGS NAME 
+            "\n Song: " + spotifyData.name + 
             // •PREVIEW LINK FROM SPOTIFY
+            "\n Spotify Link: " + spotifyData.album.spotify + 
             // •ALBUM THAT SONG IS FROM
-      console.log(data.tracks.items[0]); 
+            "\n Album: " + spotify.Data.album.name;
+
+      console.log(songData);
+       } 
       });
        break;
         
@@ -117,7 +123,7 @@ switch (userCommand) {
     // Switch statement if userImput is "do-what-it-says"
     case "do-what-it-says":
         console.log("Command: " + userCommand);
-        console.log("Find: " + userFind);
+        console.log("Find: " + userRequest);
         console.log("Command " + userCommand);
         doWhatItSays();
         break;
