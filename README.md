@@ -27,9 +27,9 @@ _This project is mainly for school as I am learning the ins and outs of back-end
 
   #### Here's photo samples of the app's function.
   
-    (https://raw.githubusercontent.com/KrisMooseVisual/Liri-Node-App/master/images/concert-this%20Lady%20Gaga.png)
+    ![Lady Gaga Concert](https://raw.githubusercontent.com/KrisMooseVisual/Liri-Node-App/master/images/concert-this%20Lady%20Gaga.png)
     
-    (https://raw.githubusercontent.com/KrisMooseVisual/Liri-Node-App/master/images/movie-this%20The%20Crow.png)
+    ![The Crow Movie](https://raw.githubusercontent.com/KrisMooseVisual/Liri-Node-App/master/images/movie-this%20The%20Crow.png)
 
 
   
