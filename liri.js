@@ -68,17 +68,23 @@ switch (userCommand) {
         if (err) {
           return console.log('Error occurred: ' + err);
         }
+        //console.log(data.tracks.items);
        // Disply to user:
        for (var i= 0; i < data.tracks.items.length; i++) {
             var spotifyData = data.tracks.items[i];
+            var previewURL = "Not available";
+            if (spotifyData.preview_url !== null) {
+                previewURL = spotifyData.preview_url;
+            }
+
             // •ARTIST
-            var songData = "Artist: " + spotifyData.artist[0].name + 
+            var songData = "Artist: " + spotifyData.artists[0].name + 
             // •SONGS NAME 
             "\n Song: " + spotifyData.name + 
             // •PREVIEW LINK FROM SPOTIFY
-            "\n Spotify Link: " + spotifyData.album.spotify + 
+            "\n Spotify Link: " + previewURL + 
             // •ALBUM THAT SONG IS FROM
-            "\n Album: " + spotify.Data.album.name;
+            "\n Album: " + spotifyData.album.name;
 
       console.log(songData);
        } 
